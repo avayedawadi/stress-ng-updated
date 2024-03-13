@@ -37,10 +37,10 @@ typedef struct {
 	const lsearch_func_t lsearch_func;
 } stress_lsearch_method_t;
 
-#define LSEARCH_SIZE_SHIFT	(20)
-#define MIN_LSEARCH_SIZE	(1 * KB)
-#define MAX_LSEARCH_SIZE	(1U << LSEARCH_SIZE_SHIFT)	/* 1 MB */
-#define DEFAULT_LSEARCH_SIZE	(8 * KB)
+#define LSEARCH_SIZE_SHIFT     (26)
+#define MIN_LSEARCH_SIZE       (1 * KB)
+#define MAX_LSEARCH_SIZE       (63 * 1024 * 1024) /* 60 MB */
+#define DEFAULT_LSEARCH_SIZE   (8 * KB)
 
 static const stress_help_t help[] = {
 	{ NULL,	"lsearch N",		"start N workers that exercise a linear search" },
